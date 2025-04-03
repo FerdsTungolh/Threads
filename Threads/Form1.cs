@@ -81,13 +81,13 @@ namespace Threads
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.DoubleBuffered = true;
+            //this.DoubleBuffered = true;
         }
         public void Background()
         {
             this.BackgroundImage = Image.FromFile("Assets\\Racing Map.jpg");
-            this.DoubleBuffered = true;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+            //this.DoubleBuffered = true;
         }
         public void Winner()
         {
@@ -104,11 +104,11 @@ namespace Threads
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Thread r1 = new Thread(new ThreadStart(Runner1));
-            r1.Start();
+            Thread r1 = new Thread(new ThreadStart(Runner1));     
             Thread r2 = new Thread(new ThreadStart(Runner2));
-            r2.Start();
             Thread r3 = new Thread(new ThreadStart(Runner3));
+            r1.Start();
+            r2.Start();
             r3.Start();
             while (true)
             {

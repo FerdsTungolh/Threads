@@ -138,6 +138,8 @@
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

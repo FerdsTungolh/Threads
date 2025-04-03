@@ -42,8 +42,13 @@ namespace Threads
             int rannitro = rand.Next(0, 2);
             if (rannitro == 1)
             {
-                Position ++;
-                NamePosition ++;
+                Position +=2;
+                NamePosition +=2;
+            }
+            if (rannitro == 0)
+            {
+                Position--;
+                NamePosition--;
             }
 
         }
